@@ -1,0 +1,93 @@
+// MIXINS
+
+// grid mixin dashboard
+@mixin gridOne($col:1, $restCol:auto, $row:auto, $restRow:null, $space:0) {
+    display: grid;
+    grid-template-columns: repeat($col, 1fr) $restCol;
+    grid-template-rows: repeat($row, 1fr) $restRow;
+    gap: $space;
+}
+
+
+//flex mixin main section
+
+@mixin flexMain($dis:null, $direction:null, $wrap:null, $just:null, $align:null) {
+    display: $dis;
+    flex-flow: $direction $wrap;
+    justify-content: $just;
+    align-items: $align;
+}
+
+//width and heiht
+@mixin w-h($w:null, $m-w:null, $h:null, $m-h:null) {
+    width: $w;
+    max-width: $m-w;
+    height: $h;
+    min-height: $m-h;
+}
+
+
+//style mixins
+@mixin sectionBox($direction:null) {
+   /* From https://css.glass */
+/* From https://css.glass */
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+//mixins for the inverted border radious from radio buttons at "sidebar"
+@mixin border-current(){ 
+    position: relative;  
+}
+@mixin border-before(){
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 0;
+    left: 1;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 0px color(primary-red); 
+}
+@mixin border-after(){
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 10px -10px 0px  color(primary-red);
+}
+
+@mixin menu-radious($color:rgba(190, 59, 255, 0.591) ){
+    border-top: 3px solid $color;
+    border-left: 3px solid $color;
+}
+// @mixin menu-radious-bottom($color:rgb(59, 111, 255) ){
+//     border-bottom: 3px solid $color;
+//     border-right: 3px solid $color;
+// }
+
+
+
+
+
+
+
+
+
+// MEDIA QUERIES
+@mixin mb($break:480px) {
+    @media screen and (max-width: $break) {
+        @content
+    }
+}
