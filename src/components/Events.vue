@@ -18,6 +18,7 @@
           {{ event.artists.forEach((item) => item.name + " ") }}
    
       <br>
+      <br>
           </div>
           
         </div>

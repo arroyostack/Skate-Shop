@@ -64,13 +64,16 @@ export default {
   @include w-h($w: 100%, $h: 100%);
   @include flexMain(
     $dis: flex,
-    $just: center,
+    $just: flex-start,
     $align: center,
     $direction: column
   );
   padding: 1rem;
+  padding-top: 7rem;
   @include mb(700px) {
     flex-direction: row;
+    justify-content: center;
+    padding-top: 1rem;
   }
 
   .radio_container {
@@ -92,7 +95,7 @@ export default {
     @include mb(700px) {
       @include w-h($w: 4rem, $h: 4rem);
       margin-bottom: 0;
-      margin-right: 1rem;
+      margin-right: .2rem;
     }
   }
 
@@ -107,6 +110,11 @@ export default {
     @include mb(700px) {
       height: 3rem;
       border-radius: $radious-15;
+      font-size: 1.5rem;
+      
+    }
+    @include mb(500px) {
+      font-size: 1rem;
     }
   }
 
