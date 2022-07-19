@@ -1,7 +1,4 @@
 <template>
-  <!-- <nav>
-    <router-link to="/">Home</router-link> |
-  </nav> -->
   <router-view />
 </template>
 
@@ -16,10 +13,10 @@
   width: 100vw;
   background-repeat: no-repeat;
   text-align: center;
-  overflow: hidden;
+  overflow-y: scroll;
+  padding: 0.6rem;
   @include mb(700px) {
     height: 100%;
   }
-  padding: 0.6rem;
 }
 </style>

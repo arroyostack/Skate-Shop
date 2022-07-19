@@ -115,7 +115,7 @@ export default {
   }
 
   .main {
-    height: 85%;
+    height: 75%;
   }
 }
 

@@ -36,7 +36,7 @@ const searchArtist = () => {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'e567a2c019msh7d91b75ddc4674ap153636jsn291b13726aea',
+                'X-RapidAPI-Key': '3d69f098c8msh8ae90e600d35ee6p188756jsn5032d78a96be',
                 'X-RapidAPI-Host': 'spotify-scraper.p.rapidapi.com'
             }
         };

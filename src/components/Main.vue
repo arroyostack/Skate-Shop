@@ -11,9 +11,8 @@
         <small>Spoty Fans: {{ artist.stats.followers }}</small>
 
         <div class="wrapper-bio" v-if="artist.biography">
-          <p>
-            {{ artist.biography.replace(/<\/?[^>]+(>|$)/g, "") }}
-          </p>
+          <div v-html="artist.biography" class="bio">
+          </div>
         </div>
       </div>
     </div>
@@ -65,8 +64,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .loading-spin {
 padding-top: 20rem;
 }
+
+
 </style>
